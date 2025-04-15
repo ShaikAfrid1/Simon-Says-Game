@@ -1,0 +1,162 @@
+body {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #f1f1f1;
+}
+
+h1,
+h2,
+h3 {
+  margin: 1rem;
+  color: #f1f1f1;
+}
+
+.btn {
+  height: 150px;
+  width: 150px;
+  border-radius: 20%;
+  border: 6px solid #222;
+  margin: 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 700px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.yellow {
+  background-color: #f9a825;
+}
+.red {
+  background-color: #e53935;
+}
+.purple {
+  background-color: #8e24aa;
+}
+.green {
+  background-color: #43a047;
+}
+
+.flash {
+  background-color: #ffffff !important;
+  box-shadow: 0 0 20px white;
+}
+
+.userFlash {
+  background-color: #00e676 !important;
+  box-shadow: 0 0 20px #00e676;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    height: 120px;
+    width: 120px;
+    margin: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    height: 100px;
+    width: 100px;
+    margin: 0.6rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+/* Toggle switch */
+.switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.switch input {
+  display: none;
+}
+.slider {
+  width: 50px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 50px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.slider::before {
+  content: "";
+  width: 21px;
+  height: 21px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+input:checked + .slider::before {
+  transform: translateX(25px);
+}
+
+/* Light Theme */
+.light-mode {
+  background-color: #f1f1f1;
+  color: #121212;
+}
+
+.light-mode h1,
+.light-mode h2,
+.light-mode h3 {
+  color: #121212;
+}
+
+.light-mode .btn {
+  border-color: #aaa;
+}
+
+.light-mode .flash {
+  background-color: #333 !important;
+}
+
+.light-mode .userFlash {
+  background-color: #66bb6a !important;
+}
+
+body.game-over {
+    background-color: #e74c3c !important; /* red shade */
+    transition: background-color 0.3s;
+  }
+  
+  body.light-mode.game-over {
+    background-color: #f87171 !important; /* lighter red for light mode */
+  }
+  
